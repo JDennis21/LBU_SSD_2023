@@ -6,7 +6,7 @@ public class Rectangle extends Shape {
 	private int height;
 	
 	Rectangle() {
-		super(2);
+		super(4);
 	}
 	
 	@Override
@@ -31,6 +31,6 @@ public class Rectangle extends Shape {
 	}
 	
 	public String toString() {
-		return "Height: " + getHeight() + "\nWidth: " + getWidth() + "\nArea: " + getArea();
+		return "Height: " + getHeight() + "\nWidth: " + getWidth() + "\nArea: " + getArea() + "\nSides: " + getSides();
 	}
 }
