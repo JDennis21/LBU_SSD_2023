@@ -20,5 +20,10 @@ public class Driver {
 		System.out.println(rectangle3.getArea());
 		
 		System.out.println(rectangle1);
+		
+		Circle circle1 = new Circle();
+		circle1.setLength(10);
+		circle1.setName("Jeff");
+		System.out.println(circle1);
 	}
 }
