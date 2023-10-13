@@ -17,6 +17,13 @@ public abstract class Subject implements Delivery
 		this.setTutor(tutor);
 		this.setRoom(room);
 	}
+	
+	public Subject(String name, String description) 
+	{
+		super();
+		this.setName(name);
+		this.setDescription(description);
+	}
 
 	@Override
 	public String toString()
