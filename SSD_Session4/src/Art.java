@@ -1,9 +1,9 @@
 
 public class Art extends Subject
 {
-	public Art(String name, String description)
+	public Art(String name, String description, String tutor, String room)
 	{
-		super(name, description);
+		super(name, description, tutor, room);
 	}
 
 	@Override

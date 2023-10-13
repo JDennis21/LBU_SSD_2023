@@ -1,18 +1,27 @@
 
 public abstract class Subject implements Delivery
 {
-	private String tutor;
-	private String room;
-	
 	private String name;
 	private String description;
 	
+	private String tutor;
+	private String room;
+	
 	public abstract int getCredit();
 	
-	public Subject(String name, String description)
+	public Subject(String name, String description, String tutor, String room)
 	{
+		super();
 		this.setName(name);
 		this.setDescription(description);
+		this.setTutor(tutor);
+		this.setRoom(room);
+	}
+
+	@Override
+	public String toString()
+	{
+		return "Subject: " + name + ", Description: " + description + ", Tutor: " + tutor + ", Room: " + room;
 	}
 
 	@Override
