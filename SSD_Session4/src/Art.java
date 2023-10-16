@@ -1,7 +1,7 @@
 
 public class Art extends Subject
 {
-	public Art(String name, String description, String tutor, String room)
+	public Art(String name, String description, String tutor, String room) throws SubjectException
 	{
 		super(name, description, tutor, room);
 	}

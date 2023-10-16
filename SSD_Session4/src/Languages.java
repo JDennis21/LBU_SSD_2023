@@ -1,7 +1,7 @@
 
 public class Languages extends Social
 {
-	public Languages(String name, String description, String tutor, String room)
+	public Languages(String name, String description, String tutor, String room) throws SubjectException
 	{
 		super(name, description, tutor, room);
 	}

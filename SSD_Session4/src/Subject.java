@@ -9,16 +9,23 @@ public abstract class Subject implements Delivery
 	
 	public abstract int getCredit();
 	
-	public Subject(String name, String description, String tutor, String room)
+	public Subject(String name, String description, String tutor, String room) throws SubjectException
 	{
 		super();
-		this.setName(name);
-		this.setDescription(description);
-		this.setTutor(tutor);
-		this.setRoom(room);
+		
+		if(tutor == null || tutor.isEmpty() || tutor.isBlank()) {
+			throw new NoTutorException("No tutor has been assigned");
+		}else if(room == null || room.isEmpty() || room.isBlank()) {
+			throw new NoRoomException("No room has been assigned");
+		}else {
+			this.setName(name);
+			this.setDescription(description);
+			this.setTutor(tutor);
+			this.setRoom(room);
+		}
 	}
 	
-	public Subject(String name, String description) 
+	public Subject(String name, String description)
 	{
 		super();
 		this.setName(name);
@@ -38,9 +45,13 @@ public abstract class Subject implements Delivery
 	}
 
 	@Override
-	public void setTutor(String tutor)
+	public void setTutor(String tutor) throws SubjectException
 	{
-		this.tutor = tutor;
+		if(tutor == null || tutor.isEmpty() || tutor.isBlank()) {
+			throw new NoTutorException("Tutor cannot be set to null");
+		}else {
+			this.tutor = tutor;
+		}
 	}
 
 	@Override
@@ -50,9 +61,13 @@ public abstract class Subject implements Delivery
 	}
 
 	@Override
-	public void setRoom(String room)
+	public void setRoom(String room) throws SubjectException
 	{
-		this.room = room;
+		if(room == null || room.isEmpty() || room.isBlank()) {
+			throw new NoRoomException("Room cannot be set to null");
+		}else {
+			this.room = room;
+		}
 	}
 
 	public String getName()
