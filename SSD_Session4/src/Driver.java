@@ -7,13 +7,7 @@ public class Driver {
 		Menu menu = new Menu();
 		String[]  strArray= {"one", "two", "three"};
 		
-		System.out.println("Array length is " + ap.getArrayLength(strArray));
-		
-		try {
-			menu.displayMenuOption(0);
-		} catch(InvalidOptionException e) {
-			e.printStackTrace();
-		}
+		System.out.println("Array length is " + ap.getArrayLength(strArray) + "\n");
 		
 		try {
 			menu.displayMenuOption(1);
@@ -22,7 +16,19 @@ public class Driver {
 		}
 		
 		try {
+			menu.displayMenuOption(2);
+		} catch(InvalidOptionException e) {
+			e.printStackTrace();
+		}
+		
+		try {
 			menu.displayMenuOption(3);
+		} catch(InvalidOptionException e) {
+			e.printStackTrace();
+		}
+		
+		try {
+			menu.displayMenuOption(0);
 		} catch(InvalidOptionException e) {
 			e.printStackTrace();
 		}
