@@ -1,3 +1,4 @@
+package General_OO_Excersise;
 
 public class NoRoomException extends SubjectException
 {

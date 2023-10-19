@@ -1,46 +1,37 @@
 
-public class Driver
-{
-	public static void main(String[] args)
-	{
-		try
-		{
-			Subject[] subjectArray = new Subject[5];
-			
-			Maths m1 = new Maths("Mathmatics", "Numbers and stuff", "John", "304");
-			subjectArray[0] = m1;
-			
-			Physics p1 = new Physics("Physics", "More numbers and stuff", "Nick", "11");
-			subjectArray[1] = p1;
-			
-			Art a1 = new Art("Art", "Painting and drawing", "Tanner", "342");
-			subjectArray[2] = a1;
-			
-			History h1 = new History("History", "Learning the past", "Rachel", "65");
-			subjectArray[3] = h1;
-			
-			Languages l1 = new Languages("English", "Learning english", "Michael", "75");
-			subjectArray[4] = l1;
-			
-			for(int i = 0; i < subjectArray.length; i++)
-			{
-				System.out.println(subjectArray[i].toString());
-			}
-		} 
+public class Driver {
+
+	public static void main(String[] args) {
 		
-		catch(NoTutorException e)
-		{
-			System.out.println(e);
-		} 
+		ArrayProcessor ap = new ArrayProcessor();
+		Menu menu = new Menu();
+		String[]  strArray= {"one", "two", "three"};
 		
-		catch (NoRoomException e)
-		{
-			System.out.println(e);
+		System.out.println("Array length is " + ap.getArrayLength(strArray));
+		
+		try {
+			menu.displayMenuOption(0);
+		} catch(InvalidOptionException e) {
+			e.printStackTrace();
 		}
 		
-		catch(SubjectException e)
-		{
-			System.out.println(e);
+		try {
+			menu.displayMenuOption(1);
+		} catch(InvalidOptionException e) {
+			e.printStackTrace();
+		}
+		
+		try {
+			menu.displayMenuOption(3);
+		} catch(InvalidOptionException e) {
+			e.printStackTrace();
+		}
+		
+		try {
+			menu.displayMenuOption(4);
+		} catch(InvalidOptionException e) {
+			e.printStackTrace();
 		}
 	}
+
 }

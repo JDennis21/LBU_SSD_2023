@@ -1,3 +1,4 @@
+package General_OO_Excersise;
 
 public abstract class Social extends Subject
 {	
