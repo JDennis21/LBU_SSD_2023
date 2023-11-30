@@ -1,0 +1,28 @@
+{
+	"c00212" : {
+		"name" : "John Smith",
+		"University" : "Leeds Beckett",
+		"year" : 2,
+		"average" : 70.3,
+		"enrolled" :  true,
+		"course" : "M.Sc. Engineering"
+	},
+	
+	"c3641149" : {
+		"name" : "Josh Dennis",
+		"University" : "Leeds Beckett",
+		"year" : 2,
+		"average" : 100,
+		"enrolled" :  true,
+		"course" : "Computer Science"
+	},
+	
+	"c0000001" : {
+		"name" : "Jane Doe",
+		"University" : "Leeds Beckett",
+		"year" : 3,
+		"average" : 39,
+		"enrolled" :  true,
+		"course" : "Business"
+	}
+}
